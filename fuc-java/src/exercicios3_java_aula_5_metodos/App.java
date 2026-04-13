@@ -32,8 +32,8 @@ public class App {
 		}
 			scan.close();
 		}
-
-	}
+}
+	
 
 
 
