@@ -4,25 +4,7 @@ import java.util.Scanner;
 
 public class App {
 
-	 public static double calcular(double num1, double num2, char simbolo) {
-		  
-				 switch(simbolo) {
-					
-					case '+':
-						return num1 + num2;
-										
-					case '-':
-						return num1 - num2;
-					case '/':
-						return num1 / num2;
-					case '*':
-						return num1 * num2;
-					case '%':
-						return num1 % num2;
-					default:
-						System.out.println("Operação inválida");
-				 }
-				}
+	 
 	
 	public static void main(String[] args) {
 		/*
@@ -33,8 +15,8 @@ public class App {
 		 * NaN e exibindo aviso.
 		 */
 		Scanner scan = new Scanner(System.in);
-		double num1;
-		double num2;
+		double num1=0;
+		double num2=0;
 		char simbolo;
 		double resultado;
 		
@@ -42,13 +24,44 @@ public class App {
 		num1=scan.nextDouble(); 
 		System.out.println("Digite o numero2:");
 		num2=scan.nextDouble(); 
-		System.out.println("simbolo + - / * %%\n");
+		System.out.println("simbolo + - / * %\n");
 		simbolo=scan.next().charAt(0);
 		resultado = calcular(num1,num2,simbolo);
+		if(Double.isNaN(resultado)) {
+		System.out.println("Número Invalido");}
 		System.out.println(resultado);
 		
 		scan.close();
 	
 	}
 		
-}
+	 public static double calcular(double num1, double num2, char simbolo) {
+		if(num2==0 && simbolo=='/') { 
+			return Double.NaN;
+		 	}
+		switch (simbolo) { 
+				 	case '+': 
+						return num1+num2; 
+				 	case '-':
+				 		return num1-num2; 
+				 	case '/':
+				 		return num1/num2; 
+				 	case '*':
+				 		return num1*num2;
+				 	case '%':
+				 		return num1%num2;
+				 	
+				
+				default:
+					throw new IllegalArgumentException("Unexpected value: " + simbolo); 
+				}
+		
+				 
+	 }
+		
+	 }
+	
+	
+
+
+
