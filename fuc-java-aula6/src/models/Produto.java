@@ -13,7 +13,7 @@ public class Produto {
 	    public double getValor() {
 	        return this.valor;
 	    }
-	    public int getUnidade() {
+	    public int getUnidades() {
 	        return this.unidades;
 	    }
 	    public void setNome(String nomeProduto) {
