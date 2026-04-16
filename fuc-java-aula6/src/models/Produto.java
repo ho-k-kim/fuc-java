@@ -1,5 +1,5 @@
 package models;
-
+//EXERCÍCIO 1 — Criar a Classe Produto com Encapsulamento
 public class Produto {
 
 	 	private String nome;
@@ -24,7 +24,7 @@ public class Produto {
 	    }
 	    
 	    public void setUnidades(int unidadesProduto) {
-	        if (unidadesProduto >= 0) this.valor = unidadesProduto;
+	        if (unidadesProduto >= 0) this.unidades = unidadesProduto;
 	    }
 	
 }
