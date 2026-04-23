@@ -26,5 +26,9 @@ public class Produto {
 	    public void setUnidades(int unidadesProduto) {
 	        if (unidadesProduto >= 0) this.unidades = unidadesProduto;
 	    }
-	
+	  @Override
+		public String toString() {
+			return "Produto [nome=" + nome + ", valor= R$" + valor + ", "+ unidades +" unidades"
+					+ "]";
+		}
 }
